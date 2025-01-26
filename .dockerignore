@@ -1,0 +1,22 @@
+# Ignorar archivos y directorios innecesarios
+*.pyc
+*.pyo
+*.log
+__pycache__/
+*.tmp
+
+# Ignorar entornos virtuales
+venv/
+.env
+
+# Ignorar herramientas y configuraciones locales
+.idea/
+.vscode/
+*.swp
+
+# Ignorar artefactos de compilación
+dist/
+build/
+
+# Ignorar archivos de control de versiones
+.git/

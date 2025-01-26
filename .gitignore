@@ -1,0 +1,24 @@
+# Ignorar entornos virtuales
+venv/
+.env
+
+# Ignorar archivos de configuración o credenciales sensibles
+*.env
+*.log
+
+# Ignorar archivos y carpetas temporales
+*.pyc
+*.pyo
+*.tmp
+__pycache__/
+*.swp
+
+# Ignorar artefactos de construcción
+dist/
+build/
+*.spec
+
+# Ignorar configuraciones locales del editor
+.idea/
+.vscode/
+*.DS_Store
