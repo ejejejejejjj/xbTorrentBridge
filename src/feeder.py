@@ -75,9 +75,18 @@ def filter_by_season_episode(title, season=None, episode=None):
 
 # Filtra por búsqueda en el título
 def filter_by_query(title, query):
-    if query:
+    if not query:
+        return True
+
+    # Extraer año del query si está presente
+    match = re.search(r"(.*)\s+(\d{4})$", query)
+    if match:
+        base_query, year = match.groups()
+        # Buscar el texto base y el año en el título
+        return (base_query.lower() in title.lower() and year in title)
+    else:
+        # Buscar solo el texto base
         return query.lower() in title.lower()
-    return True
 
 # Filtra el feed completo
 def filter_rss(rss_feed, categories=None, keys_and_values=None, season=None, episode=None, query=None):
